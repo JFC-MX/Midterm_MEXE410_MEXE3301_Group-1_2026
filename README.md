@@ -1,4 +1,4 @@
-<h1 align="center">MEXE 410 Activity 2 - Midterm Project: Mechatronics Innovation & ISO/IEC Accreditation Simulation (ISO/IEC)</h1>
+<h1 align="center">MEXE 410 Midterm Project: Mechatronics Innovation & ISO/IEC Accreditation Simulation (ISO/IEC)</h1>
 <h2 align="center">MEXE 3301 Group #1: SAFR-2000: Smart Autonomous Forklift Robot </h2>
 
 ---

@@ -8,10 +8,10 @@ This report addresses the critical non-conformances identified during the system
 ### "If the robot is autonomous, why does losing communication immediately make it unsafe? Doesn't that suggest your autonomy depends on continuous external supervision rather than onboard intelligence?"
 
 ### CAPA-1:
-<ins>Identified Non-Conformance:</ins>
+* <ins>Identified Non-Conformance:</ins>
 The system immediately enters an unsafe/protective stop state upon losing external communication, indicating a reliance on external supervision rather than true onboard autonomy.
 
-<ins>Root Cause:</ins>
+* <ins>Root Cause:</ins>
 The control logic erroneously equated a loss of fleet-management communication with a loss of local environmental awareness.
 
 * <ins>**Corrective & Preventive Action:**</ins>

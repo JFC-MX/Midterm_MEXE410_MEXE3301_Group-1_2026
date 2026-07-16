@@ -25,10 +25,10 @@ The control logic erroneously equated a loss of fleet-management communication w
 ### "Your safety architecture depends heavily on LiDARs and depth cameras. If one of these sensors provides incorrect data rather than failing completely, how does the system detect that it is receiving invalid information instead of making an unsafe decision based on incorrect inputs?"
 
 ### CAPA-2:
-<ins>Identified Non-Conformance:</ins>
+* <ins>Identified Non-Conformance:</ins>
 The safety architecture lacks a mechanism to detect incorrect or corrupted data from a LiDAR or depth camera, relying solely on detecting total sensor failure.
 
-<ins>Root Cause:</ins>
+* <ins>Root Cause:</ins>
 The perception module accepted sensor inputs as absolute truth without dynamic cross-validation against expected physical behaviors.
 
 * <ins>**Corrective & Preventive Action:**</ins>
@@ -42,10 +42,10 @@ The perception module accepted sensor inputs as absolute truth without dynamic c
 ### "Why did you select multiple LiDAR sensors instead of a single 360° LiDAR? Considering the increased computational workload, synchronization, calibration complexity, and battery consumption, what engineering analysis demonstrates that this architecture is necessary and does not compromise real-time safety performance?"
 
 ### CAPA-3:
-<ins>Identified Non-Conformance:</ins>
+* <ins>Identified Non-Conformance:</ins>
 The use of multiple LiDAR sensors lacks engineering justification regarding computational workload, latency, and synchronization compared to a single 360° unit.
 
-<ins>Root Cause:</ins>
+* <ins>Root Cause:</ins>
 The initial design prioritized field-of-view redundancy without optimizing the data pipeline, leading to potential real-time processing bottlenecks.
 
 * <ins>**Corrective & Preventive Action:**</ins>
@@ -60,10 +60,10 @@ The initial design prioritized field-of-view redundancy without optimizing the d
 ### "You claim that software-defined operational limits prevent tip-over and maintain stability. Software cannot generate stability, it only sends commands. If the software miscalculates, freezes, or experiences excessive latency, what physically prevents a 2,000 kg forklift from tipping over?"
 
 ### CAPA-4:
-<ins>Identified Non-Conformance:</ins>
+* <ins>Identified Non-Conformance:</ins>
 The system relies on software commands to maintain stability, lacking physical safeguards to prevent a 2,000 kg tip-over in the event of software latency or failure.
 
-<ins>Root Cause:</ins>
+* <ins>Root Cause:</ins>
 The mechanical chassis design leaned heavily on software-defined deceleration profiles to prevent inertial tipping, violating fail-safe mechanical principles.
 
 * <ins>**Corrective & Preventive Action:**</ins>
@@ -78,10 +78,10 @@ The mechanical chassis design leaned heavily on software-defined deceleration pr
 ### "You claim a payload capacity of 2,000 kg while stating that the vehicle operates safely alongside human workers. What engineering calculations or validation demonstrate that the braking system, stopping distance, and stability remain within safe limits under maximum payload and maximum speed?"
 
 ### CAPA-5:
-<ins>Identified Non-Conformance:</ins>
+* <ins>Identified Non-Conformance:</ins>
 There is a lack of engineering calculation demonstrating that the braking system can safely halt a maximum payload (2,000 kg) at maximum speed (1.5 m/s) in a shared human workspace.
 
-<ins>Root Cause:</ins>
+* <ins>Root Cause:</ins>
 Braking specifications were estimated based on unladen chassis weights rather than rigorous electromechanical modeling of the fully loaded system.
 
 * <ins>**Corrective & Preventive Action:**</ins>

@@ -4,10 +4,14 @@ This report addresses the critical non-conformances identified during the system
 
 ---
 
-## NCR-01: Autonomy and Communication Loss
+## NCR Question-1:
+"If the robot is autonomous, why does losing communication immediately make it unsafe? Doesn't that suggest your autonomy depends on continuous external supervision rather than onboard intelligence?"
 
-* **Identified Non-Conformance:** The system immediately enters an unsafe/protective stop state upon losing external communication, indicating a reliance on external supervision rather than true onboard autonomy.
-* **Root Cause:** The control logic erroneously equated a loss of fleet-management communication with a loss of local environmental awareness.
+Identified Non-Conformance:
+The system immediately enters an unsafe/protective stop state upon losing external communication, indicating a reliance on external supervision rather than true onboard autonomy.
+
+Root Cause:
+The control logic erroneously equated a loss of fleet-management communication with a loss of local environmental awareness.
 * **Corrective & Preventive Action:**
     * The control architecture will be re-engineered to feature a "Local Autonomous State."
     * Upon communication loss, the vehicle will no longer execute an immediate hard stop in active traffic lanes.

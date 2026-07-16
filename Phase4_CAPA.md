@@ -12,6 +12,7 @@ The system immediately enters an unsafe/protective stop state upon losing extern
 
 Root Cause:
 The control logic erroneously equated a loss of fleet-management communication with a loss of local environmental awareness.
+
 * **Corrective & Preventive Action:**
     * The control architecture will be re-engineered to feature a "Local Autonomous State."
     * Upon communication loss, the vehicle will no longer execute an immediate hard stop in active traffic lanes.
